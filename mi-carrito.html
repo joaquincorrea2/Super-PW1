@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--estilos propios-->
+    <link rel="stylesheet" href="css/mi-carrito.css" />
+
+    <link rel="stylesheet" href="css/comunes.css" />
+
+    <link rel="icon" href="img/logo-cuadrado.ico" />
+
+    <!--iconos-->
+    <script
+      src="https://kit.fontawesome.com/4b9bb66909.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--js-->
+    <script defer src="js/index.js"></script>
+
+    <title>Super+</title>
+  </head>
+  <body>
+    <!--menu-->
+    <header class="contenedor">
+      <div class="contenedor-buscar">
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="img/logo.png"
+              alt="logo supermercado"
+              class="logo__imagen"
+          /></a>
+        </div>
+
+        <div class="buscador">
+          <input
+            type="search"
+            placeholder="Buscar..."
+            class="buscador__barra"
+          />
+          <button class="buscador__boton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="usuario-carrito">
+          <div class="usuario">
+            <a href="login.html"
+              ><i class="fa-solid fa-user"></i>Iniciar sesion</a
+            >
+          </div>
+
+          <div class="carrito">
+            <a href="mi-carrito.html">
+              <span class="carrito__numero">0</span>
+              <i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+        </div>
+
+        <button class="menu__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <nav class="contenedor-links">
+        <ul class="links__lista">
+          <div class="usuario-responsive">
+            <a href="login.html"
+              ><i class="fa-solid fa-user"></i>Iniciar sesion</a
+            >
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="mi-cuenta.html">Mi cuenta</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="resumen">
+        <div class="resumen__encabezado">
+          <h3>Mi carrito</h3>
+          <button class="modal-abrir__boton">
+            <label for="btn-modal">Pagar</label>
+          </button>
+        </div>
+
+        <div class="resumen__tabla">
+          <div class="tabla__titulos">
+            <h4 class="titulos__importante">Producto</h4>
+            <h4 class="titulos__secundario">Cantidad</h4>
+            <h4 class="titulos__secundario">Precio unitario</h4>
+          </div>
+        </div>
+      </section>
+
+      <a href="#home" class="boton-arriba"
+        ><i class="fa-solid fa-angles-up"></i
+      ></a>
+
+      <!--Ventana Modal-->
+      <input type="checkbox" id="btn-modal" />
+
+      <div class="modal-pagar">
+        <div class="modal-contenido">
+          <div class="modal__encabezado">
+            <h3 class="encabezado__titulo">Pagar</h3>
+
+            <button class="encabezado__boton">
+              <label for="btn-modal"
+                ><i class="fa-solid fa-circle-xmark"></i
+              ></label>
+            </button>
+          </div>
+
+          <form action="#" method="post">
+            <div class="datos-modal">
+              <label for="tarjeta">Tarjetas guardadas</label>
+              <select id="tarjeta" name="tarjeta">
+                <option value="" selected>Elegir...</option>
+                <option value="visa">Visa</option>
+                <option value="modo">Modo</option>
+              </select>
+            </div>
+
+            <!--si lo pongo adentro de un div no me anda-->
+            <input
+              type="checkbox"
+              id="otra-tarjeta"
+              class="checkbox__otra-tarjeta--input"
+            />
+            <label for="otra-tarjeta" class="checkbox__otra-tarjeta--label"
+              >Otra tarjeta</label
+            >
+
+            <div class="datos-modal--otra-tarjeta">
+              <div class="datos-modal">
+                <label for="numero">Numero de tarjeta</label>
+                <input
+                  type="text"
+                  placeholder="Ingrese numero"
+                  id="numero"
+                  name="numero"
+                />
+              </div>
+
+              <div class="datos-modal">
+                <div>
+                  <label for="codigo">Codigo</label>
+                  <input
+                    type="text"
+                    placeholder="Ingrese codigo"
+                    id="codigo"
+                    name="codigo"
+                  />
+                </div>
+
+                <div>
+                  <label for="vencimieto">Vencimieto</label>
+                  <input
+                    type="text"
+                    placeholder="Ingrese vencimieto"
+                    id="vencimieto"
+                    name="vencimieto"
+                  />
+                </div>
+              </div>
+
+              <div class="datos-modal">
+                <label for="nombre">Nombre de titular</label>
+                <input
+                  type="text"
+                  placeholder="Ingrese nombre"
+                  id="nombre"
+                  name="nombre"
+                />
+              </div>
+            </div>
+
+            <div class="datos-modal">
+              <label for="direcciones">Direcciones guardadas</label>
+              <select id="direcciones" name="direcciones">
+                <option value="" selected>Elegir...</option>
+                <option value="casa">Casa</option>
+                <option value="dpto">Dpto.</option>
+              </select>
+            </div>
+
+            <!--si lo pongo adentro de un div no me anda-->
+            <input
+              type="checkbox"
+              id="otra-direccion"
+              class="checkbox__otra-tarjeta--input"
+            />
+            <label for="otra-direccion" class="checkbox__otra-tarjeta--label"
+              >Otra direccion</label
+            >
+
+            <div class="datos-modal--otra-direccion">
+              <div class="datos-modal">
+                <label for="provincia">Provincia</label>
+                <select id="provincia" name="provincia">
+                  <option value="buenos-aires" selected>Buenos Aires</option>
+                  <option value="caba">CABA</option>
+                </select>
+              </div>
+
+              <div class="datos-modal">
+                <label for="localidad">Localidad</label>
+                <select id="localidad" name="localidad">
+                  <option value="" selected>Elegir...</option>
+                  <option value="la-matanza">La Matanza</option>
+                  <option value="moron">Moron</option>
+                </select>
+              </div>
+
+              <div class="datos-modal">
+                <label for="direccion">Direccion</label>
+                <input
+                  type="text"
+                  placeholder="Ingrese direccion"
+                  id="direccion"
+                  name="direccion"
+                />
+              </div>
+
+              <div class="datos-modal">
+                <label for="telefono">Telefono</label>
+                <input
+                  type="text"
+                  placeholder="Ingrese telefono"
+                  id="telefono"
+                  name="telefono"
+                />
+              </div>
+
+              <div class="datos-modal">
+                <div>
+                  <label for="piso">Piso</label>
+                  <input
+                    type="text"
+                    placeholder="Ingrese piso"
+                    id="piso"
+                    name="piso"
+                  />
+                </div>
+
+                <div>
+                  <label for="dpto">Dpto</label>
+                  <input
+                    type="text"
+                    placeholder="Ingrese dpto"
+                    id="dpto"
+                    name="dpto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="datos-modal__boton">
+              <button type="submit" class="registrar__boton">Guardar</button>
+            </div>
+          </form>
+        </div>
+
+        <label for="btn-modal" class="modal__cerrar"></label>
+      </div>
+      <!--Fin de Ventana Modal-->
+    </main>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#f1d373"
+        fill-opacity="1"
+        d="M0,160L1440,32L1440,320L0,320Z"
+      ></path>
+    </svg>
+
+    <footer class="pie">
+      <div class="pie__contenedor">
+        <div class="horario">
+          <a href="index.html"
+            ><img src="img/logo.png" alt="logo" class="horario__imagen"
+          /></a>
+
+          <p class="horario__texto">
+            <i class="fa-solid fa-shop"></i>Lunes a Sabado de 8 a 14 hs. y de 16
+            a 20 hs.
+          </p>
+        </div>
+
+        <div class="datos">
+          <h4>Datos del grupo</h4>
+          <p>Joaquin Correa</p>
+        </div>
+
+        <div class="redes">
+          <h4>Seguinos</h4>
+
+          <div class="redes__iconos">
+            <a href="https://www.facebook.com/coto/"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com/coto_ar"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/coto_ar/">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

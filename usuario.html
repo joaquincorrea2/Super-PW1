@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--estilos propios-->
+    <link rel="stylesheet" href="css/usuario.css" />
+
+    <link rel="icon" href="img/logo-cuadrado.ico" />
+
+    <!--iconos-->
+    <script
+      src="https://kit.fontawesome.com/4b9bb66909.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="js/usuario.js"></script>
+
+    <title>Super+</title>
+  </head>
+  <body>
+    <main>
+      <div class="contenedor">
+        <section class="login">
+          <img src="img/logo.png" alt="logo" class="login__imagen" />
+
+          <form action="#" method="post" id="form-usuario">
+            <div class="login__datos">
+              <div class="datos">
+                <label for="email">Email</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Ingrese email"
+                  required
+                />
+              </div>
+
+              <div class="datos">
+                <label for="nombre">Nombre</label>
+
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ingrese nombre"
+                  required
+                />
+              </div>
+
+              <div class="datos">
+                <label for="apellido">Apellido</label>
+
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  placeholder="Ingrese apellido"
+                  required
+                />
+              </div>
+
+              <div class="datos">
+                <label for="contraseña">Contraseña</label>
+
+                <input
+                  type="password"
+                  id="contraseña"
+                  name="contraseña"
+                  placeholder="Ingrese contraseña"
+                  required
+                />
+              </div>
+
+              <div class="datos">
+                <label for="contraseña-2">Repetir contraseña</label>
+
+                <input
+                  type="password"
+                  id="contraseña-2"
+                  name="contraseña-2"
+                  placeholder="Ingrese contraseña"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="login__registrar">
+              <button type="reset" class="registrar__boton">
+                <a href="login.html">Cancelar</a>
+              </button>
+              <button type="submit" class="registrar__boton">Guardar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

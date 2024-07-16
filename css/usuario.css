@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(-90deg, #f1d373, #faf0d3);
+  background-size: 500%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+/*LOGIN*/
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 35%;
+}
+
+/*imagen*/
+.login__imagen {
+  width: 70%;
+}
+
+/*form*/
+form {
+  width: 70%;
+}
+
+/*usuario y contraseña*/
+.login__datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.datos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.datos label {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.datos input {
+  border-radius: 100px;
+  border-style: none;
+  padding: 5px 10px;
+  height: 30px;
+  width: 200px;
+  font-size: 15px;
+}
+
+.datos input:focus {
+  outline: #e4b30f solid 3px;
+}
+
+/*boton login*/
+.login__registrar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.registrar__boton {
+  border-radius: 100px;
+  border-style: none;
+  height: 30px;
+  width: 100px;
+  background-color: #e4b30f;
+}
+
+.registrar__boton:hover {
+  border: #e4b30f solid 3px;
+  background-color: #faf0d3;
+  cursor: pointer;
+}
+
+.registrar__boton a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrar__cuenta {
+  margin-left: 5px;
+}
+
+.registrar__cuenta:hover {
+  text-decoration: underline;
+}
+
+/**/
+@media (max-width: 768px) {
+  form {
+    width: auto;
+  }
+}

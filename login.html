@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/login.css" />
+
+    <link rel="icon" href="img/logo-cuadrado.ico" />
+
+    <script defer src="js/login.js"></script>
+
+    <title>Super+</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="contenedor">
+        <section class="login">
+          <img src="img/logo.png" alt="logo" class="login__imagen" />
+
+          <div class="login__datos">
+            <div class="datos__usuario">
+              <label for="usuario">Usuario</label>
+
+              <input
+                type="text"
+                placeholder="Ingrese usuario"
+                required
+                id="usuario"
+                name="usuario"
+                class="usuario__input"
+              />
+            </div>
+
+            <div class="datos__contraseña">
+              <label for="contraseña">Contraseña</label>
+
+              <input
+                type="password"
+                placeholder="Ingrese contraseña"
+                required
+                id="contraseña"
+                name="contraseña"
+                class="contraseña__input"
+              />
+            </div>
+          </div>
+
+          <div class="login__olvido">
+            <a href="">¿Olvidaste la contraseña?</a>
+          </div>
+
+          <div class="login__registrar">
+            <button type="submit" class="registrar__boton">Login</button>
+            <h3>
+              ¿No tenes cuenta?<a href="usuario.html" class="registrar__cuenta"
+                >Registrate</a
+              >
+            </h3>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
